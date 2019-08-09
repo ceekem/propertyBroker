@@ -1,0 +1,24 @@
+.ios,.md{
+    page-profile {
+      .list{
+          .item{
+            border: #ccc 1px solid;  margin-bottom: 10px; border-radius:5px;
+          }
+      }
+
+      .card-content{ padding:5px; }
+
+       ion-textarea{ min-height:70px;}
+  
+       .item-md.item-input.input-has-focus .item-inner {
+         box-shadow:none;
+       }
+
+       .ngR{ border:#ff0000 1px solid !important;}
+        .commonBackground{
+                background: url(../assets/imgs/listingBackground.jpg) no-repeat scroll left bottom/cover;
+                display: block;
+                background-repeat: repeat-y;
+        }
+    }
+}

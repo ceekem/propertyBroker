@@ -1,0 +1,397 @@
+{
+  "data": {
+    "agencies": [
+      {
+        "id": 2431,
+        "title": "opensource"
+      },
+      {
+        "id": 2430,
+        "title": "OST"
+      }
+    ],
+    "propertystatus": [
+      {
+        "id": 34,
+        "title": "For Rent"
+      },
+      {
+        "id": 15,
+        "title": "For Sale"
+      },
+      {
+        "id": 65,
+        "title": "Foreclosures"
+      },
+      {
+        "id": 69,
+        "title": "New Costruction"
+      },
+      {
+        "id": 70,
+        "title": "New Listing"
+      },
+      {
+        "id": 71,
+        "title": "Open House"
+      },
+      {
+        "id": 75,
+        "title": "Reduced Price"
+      },
+      {
+        "id": 76,
+        "title": "Resale"
+      }
+    ],
+    "propertytype": [
+      {
+        "id": 1,
+        "title": "Commercial"
+      },
+      {
+        "id": 2,
+        "title": "Non Commercial"
+      }
+    ],
+    "propertystate": [
+      {
+        "id": 166,
+        "title": "Alabama",
+        "abbreviation": "AL"
+      },
+      {
+        "id": 151,
+        "title": "Alaska",
+        "abbreviation": "AK"
+      },
+      {
+        "id": 167,
+        "title": "Arizona",
+        "abbreviation": "AZ"
+      },
+      {
+        "id": 168,
+        "title": "Arkansas",
+        "abbreviation": "AR"
+      },
+      {
+        "id": 152,
+        "title": "California",
+        "abbreviation": "CA"
+      },
+      {
+        "id": 169,
+        "title": "Colorado",
+        "abbreviation": "CO"
+      },
+      {
+        "id": 170,
+        "title": "Connecticut",
+        "abbreviation": "CT"
+      },
+      {
+        "id": 171,
+        "title": "Delaware",
+        "abbreviation": "DE"
+      },
+      {
+        "id": 14,
+        "title": "Florida",
+        "abbreviation": "FL"
+      },
+      {
+        "id": 172,
+        "title": "Georgia",
+        "abbreviation": "GA"
+      },
+      {
+        "id": 159,
+        "title": "Hawaii",
+        "abbreviation": "HI"
+      },
+      {
+        "id": 223,
+        "title": "Hdhd",
+        "abbreviation": "HDHD"
+      },
+      {
+        "id": 173,
+        "title": "Idaho",
+        "abbreviation": "ID"
+      },
+      {
+        "id": 174,
+        "title": "Illinois",
+        "abbreviation": "IL"
+      },
+      {
+        "id": 158,
+        "title": "Indiana",
+        "abbreviation": "IN"
+      },
+      {
+        "id": 175,
+        "title": "Iowa",
+        "abbreviation": "IA"
+      },
+      {
+        "id": 176,
+        "title": "Kansas",
+        "abbreviation": "KS"
+      },
+      {
+        "id": 177,
+        "title": "Kentucky",
+        "abbreviation": "KY"
+      },
+      {
+        "id": 178,
+        "title": "Louisiana",
+        "abbreviation": "LA"
+      },
+      {
+        "id": 179,
+        "title": "Maine",
+        "abbreviation": "ME"
+      },
+      {
+        "id": 180,
+        "title": "Maryland",
+        "abbreviation": "MD"
+      },
+      {
+        "id": 181,
+        "title": "Massachusetts",
+        "abbreviation": "MA"
+      },
+      {
+        "id": 182,
+        "title": "Michigan",
+        "abbreviation": "MI"
+      },
+      {
+        "id": 183,
+        "title": "Minnesota",
+        "abbreviation": "MN"
+      },
+      {
+        "id": 184,
+        "title": "Mississippi",
+        "abbreviation": "MS"
+      },
+      {
+        "id": 185,
+        "title": "Missouri",
+        "abbreviation": "MO"
+      },
+      {
+        "id": 186,
+        "title": "Montana",
+        "abbreviation": "MT"
+      },
+      {
+        "id": 187,
+        "title": "Nebraska",
+        "abbreviation": "NE"
+      },
+      {
+        "id": 188,
+        "title": "Nevada",
+        "abbreviation": "NV"
+      },
+      {
+        "id": 189,
+        "title": "New Hampshire",
+        "abbreviation": "NH"
+      },
+      {
+        "id": 153,
+        "title": "New Jersey",
+        "abbreviation": "NJ"
+      },
+      {
+        "id": 157,
+        "title": "New Mexico",
+        "abbreviation": "NM"
+      },
+      {
+        "id": 45,
+        "title": "New York",
+        "abbreviation": "NY"
+      },
+      {
+        "id": 190,
+        "title": "North Carolina",
+        "abbreviation": "NC"
+      },
+      {
+        "id": 191,
+        "title": "North Dakota",
+        "abbreviation": "ND"
+      },
+      {
+        "id": 192,
+        "title": "Ohio",
+        "abbreviation": "OH"
+      },
+      {
+        "id": 193,
+        "title": "Oklahoma",
+        "abbreviation": "OK"
+      },
+      {
+        "id": 194,
+        "title": "Oregon",
+        "abbreviation": "OR"
+      },
+      {
+        "id": 195,
+        "title": "Pennsylvania",
+        "abbreviation": "PA"
+      },
+      {
+        "id": 196,
+        "title": "Rhode Island",
+        "abbreviation": "RI"
+      },
+      {
+        "id": 197,
+        "title": "South Carolina",
+        "abbreviation": "SC"
+      },
+      {
+        "id": 198,
+        "title": "South Dakota",
+        "abbreviation": "SD"
+      },
+      {
+        "id": 199,
+        "title": "Tennessee",
+        "abbreviation": "TN"
+      },
+      {
+        "id": 154,
+        "title": "Texas",
+        "abbreviation": "TX"
+      },
+      {
+        "id": 200,
+        "title": "Utah",
+        "abbreviation": "UT"
+      },
+      {
+        "id": 201,
+        "title": "Vermont",
+        "abbreviation": "VT"
+      },
+      {
+        "id": 156,
+        "title": "Virginia",
+        "abbreviation": "VA"
+      },
+      {
+        "id": 155,
+        "title": "Washington",
+        "abbreviation": "WA"
+      },
+      {
+        "id": 202,
+        "title": "West Virginia",
+        "abbreviation": "WV"
+      },
+      {
+        "id": 203,
+        "title": "Wisconsin",
+        "abbreviation": "WI"
+      },
+      {
+        "id": 204,
+        "title": "Wyoming",
+        "abbreviation": "WY"
+      }
+    ],
+    "brokeragerange": [
+      {
+        "brokerage": "5  to 10"
+      },
+      {
+        "brokerage": "10 to 15"
+      },
+      {
+        "brokerage": "15 to 20"
+      }
+    ],
+    "bathrooms": [
+      {
+        "bath": 1
+      },
+      {
+        "bath": 2
+      },
+      {
+        "bath": 3
+      },
+      {
+        "bath": 4
+      },
+      {
+        "bath": 5
+      },
+      {
+        "bath": 6
+      },
+      {
+        "bath": 7
+      }
+    ],
+    "bedrooms": [
+      {
+        "room": 1
+      },
+      {
+        "room": 2
+      },
+      {
+        "room": 3
+      },
+      {
+        "room": 4
+      },
+      {
+        "room": 5
+      },
+      {
+        "room": 6
+      },
+      {
+        "room": 7
+      },
+      {
+        "room": 8
+      },
+      {
+        "room": 9
+      },
+      {
+        "room": 10
+      },
+      {
+        "room": 11
+      },
+      {
+        "room": 12
+      },
+      {
+        "room": 13
+      },
+      {
+        "room": 14
+      },
+      {
+        "room": 15
+      }
+    ]
+  },
+  "status": true
+}

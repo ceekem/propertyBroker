@@ -1,0 +1,16 @@
+page-register-profileimg {
+    .profileAvtar{
+        border:#ccc 1px solid; min-height: 250px; background:#eee;
+        border-radius: 10px;
+        img{ width:200px; }
+        object-fit: cover;
+        margin-bottom:20px;
+      }
+      .removeBtn{
+         padding:0 0.5rem; border-radius: 25px; margin:10px; left:20px;
+         position:absolute; background:red;
+        width: 52px;
+        height: 50px;
+         .icon{ font-size: 2.5rem !important; color:#fff !important;  }
+      }
+}

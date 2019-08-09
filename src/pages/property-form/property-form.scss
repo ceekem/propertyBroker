@@ -1,0 +1,107 @@
+.ios,.md{
+    page-property-form {
+      //--------------------------
+      .list{
+          .item{
+            border: #ccc 1px solid;  margin-bottom: 10px; border-radius:5px;
+          }
+          ion-textarea{ min-height:100px; width:100%; padding-left:0px;}
+    
+          //.item:nth-child(1){ padding-left:14px;}
+          //.item:nth-child(3){width:49%; float:right;}
+    
+          //.item:nth-child(4){width:49%; float:left;}
+          //.item:nth-child(5){width:49%; float:right;}
+    
+          //.item:nth-child(6){width:49%; float:left;}
+          //.item:nth-child(7){width:49%; float:right;}
+          .sqFeet{ color:#aaa;}
+          .priceLabel{ margin-right:0px;}
+      }
+    
+      .firstFrm{
+        .item:nth-child(1){ padding-left:14px;}
+      }
+    
+    
+      .descSec{
+        .item:nth-child(2){
+          width:100%; padding-left:14px;
+          ion-textarea{
+            min-height:250px; width:100% ;
+          }
+        }
+      }
+    
+      .mediaSection{
+         margin-bottom:20px;
+         .card{
+           margin:0 0 20px 0; width:100%;
+           .card-header{ padding:1px; background:#f8f8f8;}
+           .card-content{
+             background-color:#f8f8f8;
+             .icon{ font-size: 9.2rem; color:#ccc; margin:10% auto;}
+             p{ color:#a1a1a1; font-style:italic;}
+             .overlayCamera{ position: absolute; color:#000; opacity:0.3!important ; margin: 17% -10%;}
+             img{ height:220px; object-fit:cover;}
+           }
+         }
+      }
+      .card-content{ padding:5px; min-height:120px;}
+      .audioFileName{
+        font-size:15px; color:#000;
+      }
+    
+       .customSegments{
+         padding: 0px !important; min-height:50px;
+         .segment-button{ font-size:1.3rem; text-transform: capitalize;}
+         .toolbar-content{
+           .segment{
+             background:#fff;
+             .segment-button{height: 50px !important;line-height: 5rem;}
+           }
+         }
+         .segment-button{ color:#aaa; margin:1px; }
+         .segment-activated { color:#555; border-color:$buttonColor; }
+       }
+    
+       .removeBtn{
+         left:20px;
+         padding:0 0.5rem; border-radius: 25px;
+         top:20px;
+         position:absolute;
+          background:red;
+         width: 52px;
+         height: 50px;
+          .icon{ font-size: 2.5rem !important; color:#fff !important;  }
+       }
+    
+       .removeAudioBtn{
+         padding:0 0.5rem; border-radius: 25px;
+        background:red;
+         width: 52px;
+         height: 50px;
+          .icon{ font-size: 2.5rem !important; color:#fff !important;  }
+       }
+    
+    
+       ion-textarea{ min-height:200px;}
+       .footer{
+             .toolbar{min-height: 40px;}
+             .toolbar-background{background:transparent;}
+             .toolbar-content{
+               button{margin:0; height: 4.6rem}
+             }
+       }
+    
+       .item-md.item-input.input-has-focus .item-inner {
+         box-shadow:none;
+       }
+    
+       .ngR{ border:#ff0000 1px solid !important;}
+    
+    
+       //---------------
+    }
+    }
+    

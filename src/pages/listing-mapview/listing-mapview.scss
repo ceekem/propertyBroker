@@ -1,0 +1,19 @@
+.ios, .md {
+    page-listing-mapview {
+        #map {
+        height: 100%;
+        width: 100%;
+        top: 0;
+        left: 0;
+        position: absolute!important;
+        overflow: hidden!important;
+        }
+        .searchbar-input{
+          color:#000;
+        }
+  
+        h4{ font-size:16px;}
+        .closeBtn{ padding:10px 15px; float:left; background-color:color($colors, danger); color:#fff;}
+        .viewDetail{ padding:10px 15px; float:right; background-color:$buttonColor; color:#fff;}
+         }
+  }

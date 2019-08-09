@@ -1,0 +1,138 @@
+<ion-header no-border>
+  <ion-navbar >
+    <ion-title>{{frmData.pro_id ? 'Edit' : 'Add'}} Property</ion-title>
+    <ion-buttons end>
+      <button ion-button icon-only>
+        <img style="opacity:0" src="" />
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+
+  <ion-toolbar>
+    <ion-segment color="light" [(ngModel)]="screenType" (ionChange)="selectScreenType(screenType)">
+      <ion-segment-button  value="M">Media</ion-segment-button>
+      <ion-segment-button  value="S">Description</ion-segment-button>
+      <ion-segment-button *ngIf="!frmData.pro_id" [disabled]="tabsStatus.tab3" value="D">Summary</ion-segment-button>
+      <ion-segment-button *ngIf="frmData.pro_id" value="D">Summary</ion-segment-button>
+    </ion-segment>
+  </ion-toolbar>
+
+</ion-header>
+
+<ion-content padding>
+
+  <form name="propertyFrm" (ngSubmit)="frmSubmit()">
+    <ion-list class="firstFrm" no-lines *ngIf="screenType=='S'">
+
+      <ion-item  [ngClass]="frmVArray.frm1[0]">
+       <ion-textarea  name="fullname" placeholder="Street Address"  [(ngModel)]="frmData.street_name" ></ion-textarea>
+      </ion-item>
+
+      <ion-item [ngClass]="frmVArray.frm1[1]" >
+       <ion-input  name="city" placeholder="City" [(ngModel)]="frmData.city" ></ion-input>
+      </ion-item>
+
+      <ion-item [ngClass]="frmVArray.frm1[2]">
+       <ion-label>State</ion-label>
+       <ion-select name="state" [(ngModel)]="frmData.state" >
+         <ion-option *ngFor="let obj of commFields.propertystate" [value]="obj.abbreviation" >{{obj.title}}</ion-option>
+       </ion-select>
+     </ion-item>
+
+      <ion-item [ngClass]="frmVArray.frm1[3]" >
+       <ion-input type="tel" maxlength="5" name="postal_code" placeholder="Zip Code" [(ngModel)]="frmData.postal_code" ></ion-input>
+      </ion-item>
+
+      <ion-item [ngClass]="frmVArray.frm1[4]">
+       <ion-input  type="tel" maxlength="10"
+       name="size"
+       (keyup)="formatNumber($event.target.value,'size')"
+       placeholder="Square Footage" [(ngModel)]="frmData.size" ></ion-input>
+       <div *ngIf="frmData.size" class="sqFeet" item-end>Sq. Ft.</div>
+      </ion-item>
+
+      <!-- <ion-item [ngClass]="frmVArray.frm1[5]">
+       <ion-label>Bedrooms</ion-label>
+       <ion-select name="bedrooms" [(ngModel)]="frmData.bedrooms" >
+         <ion-option *ngFor="let item of bedbathData" [value]="item">{{item}}</ion-option>
+       </ion-select>
+     </ion-item>
+
+     <ion-item [ngClass]="frmVArray.frm1[6]">
+      <ion-label>Baths</ion-label>
+      <ion-select name="bathrooms" [(ngModel)]="frmData.bathrooms" >
+          <ion-option *ngFor="let item of bedbathData" [value]="item">{{item}}</ion-option>
+      </ion-select>
+    </ion-item> -->
+
+    <ion-item [ngClass]="frmVArray.frm1[7]">
+     <ion-label>Property Type</ion-label>
+     <ion-select name="property_type" [(ngModel)]="frmData.property_type" >
+       <ion-option *ngFor="let obj of commFields.propertytype" [value]="obj.id" >{{obj.title}}</ion-option>
+     </ion-select>
+   </ion-item>
+
+   <ion-item [ngClass]="frmVArray.frm1[8]">
+     <div *ngIf="frmData.prop_price" class="priceLabel" item-start>$</div>
+    <ion-input  type="tel" maxlength="10"
+     name="prop_price"
+     (keyup)="formatNumber($event.target.value,'price')"
+     placeholder="Price" [(ngModel)]="frmData.prop_price" ></ion-input>
+   </ion-item>
+
+   <!-- <ion-item [ngClass]="frmVArray.frm1[9]">
+    <ion-input  type="tel" maxlength="6"
+    name="cobroke"
+    placeholder="Co-broke" [(ngModel)]="frmData.cobroke" ></ion-input>
+    <div *ngIf="frmData.cobroke" class="sqFeet" item-end>%</div>
+   </ion-item> -->
+
+    </ion-list>
+
+    <div class="mediaSection" *ngIf="screenType=='M'">
+      <ion-card [ngClass]="frmVArray.frm2[0]" >
+        <ion-card-header *ngIf="frmData.thumb">
+          <div class="removeBtn" ion-button icon-only  (click)="removeImage()">
+            <ion-icon name="trash"> </ion-icon>
+          </div>
+        </ion-card-header>
+       <ion-card-content (click)="actionSheet();" text-center>
+         <ion-icon [ngClass]="overlayIcon" name="ios-camera"> </ion-icon>
+         <img  *ngIf="frmData.thumb" src="{{frmData.thumb}}">
+         <div *ngIf="!frmData.thumb">
+         <p>Take Photo</p>
+       </div>
+       </ion-card-content>
+     </ion-card>
+  </div>
+
+  <ion-list class="descSec" no-lines *ngIf="screenType=='D'">
+    <ion-item [ngClass]="frmVArray.frm3[0]">
+     <ion-input  name="title" placeholder="Title" [(ngModel)]="frmData.title" ></ion-input>
+    </ion-item>
+
+    <ion-item [ngClass]="frmVArray.frm3[1]">
+     <ion-textarea  name="description" placeholder="Description"  [(ngModel)]="frmData.description" ></ion-textarea>
+    </ion-item>
+  </ion-list>
+  </form>
+
+
+</ion-content>
+
+<ion-footer >
+
+  <ion-toolbar>
+  <ion-row>
+    <ion-col >
+      <button  ion-button block color="light" (click)="saveAsDraft()">Unpublish</button>
+    </ion-col>
+    <ion-col>
+      <button  ion-button full icon-right (click)="continueToPayment()">
+           <p>{{screenType!='D' ? 'Next' : 'Publish'}}</p>
+           <ion-icon *ngIf="screenType!='D'" name="ios-arrow-forward"> </ion-icon>
+      </button>
+    </ion-col>
+  </ion-row>
+  </ion-toolbar>
+</ion-footer>

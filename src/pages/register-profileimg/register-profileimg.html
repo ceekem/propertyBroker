@@ -1,0 +1,23 @@
+<ion-header>
+  <ion-navbar hideBackButton="true">
+    <ion-title>Profile Picture</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <div class="profileAvtar" text-center>
+
+    <div class="removeBtn" *ngIf="frmData.profile_image" ion-button icon-only  (click)="removeImage()">
+      <ion-icon name="trash"> </ion-icon>
+    </div>
+    <img  src="{{frmData.profile_image!='' ? frmData.profile_image : 'assets/imgs/no-image.jpg' }}">
+  </div>
+
+  <button ion-button block *ngIf="!frmData.profile_image"  (click)="actionSheet()">Select Profile Picture</button>
+  <button ion-button block
+  *ngIf="frmData.profile_image"
+   (click)="continue()">Continue</button>
+  <br/>
+  <button ion-button block color="dark" outline (click)="skipToHome()">SKIP</button>
+
+</ion-content>

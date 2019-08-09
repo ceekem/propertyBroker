@@ -1,0 +1,56 @@
+{
+  "prepare_queue": {
+    "installed": [],
+    "uninstalled": []
+  },
+  "config_munge": {
+    "files": {}
+  },
+  "installed_plugins": {
+    "cordova-plugin-camera": {
+      "PACKAGE_NAME": "io.property.broker"
+    },
+    "call-number": {
+      "PACKAGE_NAME": "io.property.broker"
+    },
+    "cordova-plugin-filechooser": {
+      "PACKAGE_NAME": "io.property.broker"
+    },
+    "cordova-plugin-filepath": {
+      "PACKAGE_NAME": "io.property.broker"
+    },
+    "cordova-plugin-file-transfer": {
+      "PACKAGE_NAME": "io.property.broker"
+    },
+    "cordova-plugin-whitelist": {
+      "PACKAGE_NAME": "io.property.broker"
+    },
+    "cordova-plugin-device": {
+      "PACKAGE_NAME": "io.property.broker"
+    },
+    "cordova-plugin-splashscreen": {
+      "PACKAGE_NAME": "io.property.broker"
+    },
+    "cordova-plugin-ionic-webview": {
+      "PACKAGE_NAME": "io.property.broker"
+    },
+    "cordova-plugin-ionic-keyboard": {
+      "PACKAGE_NAME": "io.property.broker"
+    },
+    "cordova-plugin-x-socialsharing": {
+      "ANDROID_SUPPORT_V4_VERSION": "24.1.1+",
+      "PACKAGE_NAME": "io.property.broker"
+    },
+    "cordova-plugin-geolocation": {
+      "PACKAGE_NAME": "io.property.broker"
+    }
+  },
+  "dependent_plugins": {
+    "cordova-plugin-file": {
+      "PACKAGE_NAME": "io.property.broker"
+    },
+    "es6-promise-plugin": {
+      "PACKAGE_NAME": "io.property.broker"
+    }
+  }
+}

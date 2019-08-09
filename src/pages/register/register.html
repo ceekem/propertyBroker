@@ -1,0 +1,53 @@
+<!-- <ion-header>
+  <ion-navbar >
+    <ion-title>Register</ion-title>
+  </ion-navbar>
+</ion-header> -->
+
+<ion-content padding class="redBackground">
+
+  <div class="logo" text-center>
+    <img src="assets/dummy-logo.png">
+  </div>
+
+  <form (ngSubmit)="frmSubmit()">
+  <ion-list no-lines>
+    <ion-item [ngClass]="frmVArray[0]">
+     <ion-input  name="fullname" placeholder="Full Name" [(ngModel)]="frmData.fullname" ></ion-input>
+    </ion-item>
+
+    <ion-item [ngClass]="frmVArray[1]">
+      <ion-input type="text"  name="email"  placeholder="Email Address"  [(ngModel)]="frmData.email"></ion-input>
+    </ion-item>
+
+    <ion-item [ngClass]="frmVArray[2]">
+     <ion-input
+     type="text"
+     [brmasker]="{mask:'(000) 000-0000', len:14}"
+     name="phone_number" placeholder="Phone Number" [(ngModel)]="frmData.phone_number"></ion-input>
+    </ion-item>
+
+    <ion-item [ngClass]="frmVArray[4]">
+     <ion-textarea  name="brokerrage_address" placeholder="Brokerage Address" [(ngModel)]="frmData.brokerrage_address" ></ion-textarea>
+    </ion-item>
+
+    <ion-item [ngClass]="frmVArray[5]">
+     <ion-input  type="number" name="license" placeholder="License Number" [(ngModel)]="frmData.license" ></ion-input>
+    </ion-item>
+
+    <ion-item [ngClass]="frmVArray[7]">
+      <ion-input type="password" name="password"  placeholder="Password" [(ngModel)]="frmData.password"></ion-input>
+    </ion-item>
+
+    <ion-item [ngClass]="frmVArray[8]">
+      <ion-input type="password" name="confirm_password"   placeholder="Confirm Password" [(ngModel)]="frmData.confirm_password"></ion-input>
+    </ion-item>
+
+  </ion-list>
+  <button ion-button block>Submit</button>
+</form>
+<button ion-button clear block  color="light" (click)="goToLogin()">Login</button>
+<button ion-button clear text-right color="light" outline block (click)="goToForgot()" >Forgot Password?</button>
+
+</ion-content>
+

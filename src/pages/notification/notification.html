@@ -1,0 +1,29 @@
+<ion-header>
+    <ion-navbar hideBackButton="true">
+      <button ion-button menuToggle>
+        <ion-icon name="menu"></ion-icon>
+      </button>
+      <ion-title>Appointments</ion-title>
+    </ion-navbar>
+  </ion-header>
+  
+  <ion-content padding class="commonBackground">
+  
+     <ion-refresher (ionRefresh)="doRefresh($event);" >
+        <ion-refresher-content></ion-refresher-content>
+    </ion-refresher> 
+    <!-- <div class="noResult" >No Result Found <p>Pull Down screen to refresh.</p></div>
+   -->
+    <ion-list >
+        <ion-list *ngFor="let obj of listData; let i=index">
+         
+                <ion-item text-wrap >
+                  <h2>{{obj.fullname}}</h2>
+                  <p>{{obj.meeting_date}}({{obj.meeting_time}})</p>
+                  <button ion-button outline (click)="goToNotification(obj)" item-end>View</button>
+                </ion-item>
+        </ion-list>
+    </ion-list>
+  
+  </ion-content>
+  

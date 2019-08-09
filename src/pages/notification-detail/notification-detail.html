@@ -1,0 +1,28 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Detail</ion-title>
+      <ion-buttons end>
+      <button ion-button icon-only (click)="close()">
+         <ion-icon name="close"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding class="commonBackground">
+  <h5 class="header">Name</h5>
+  <p>{{notificationData.fullname}}</p>
+  <h5 class="header">Email</h5>
+  <p>{{notificationData.email}}</p>
+  <h5 class="header">Date & Time</h5>
+  <p> {{notificationData.meeting_date}} & {{notificationData.meeting_time}}</p>
+  <h5 class="header">Message</h5>
+  <p>{{notificationData.note}}
+    <button ion-button outline (click)="goToProperty(notificationData.property)" end>Detail</button>
+  </p>
+
+  <button class="callicon" ion-fab (click)="callMember(notificationData.phone)"><ion-icon name="ios-call"></ion-icon></button>
+</ion-content>

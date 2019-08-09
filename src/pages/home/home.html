@@ -1,0 +1,89 @@
+<ion-header>
+  <ion-navbar hideBackButton="true">
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Properties</ion-title>
+    <ion-buttons end>
+      <button ion-button icon-only (click)="goToMapview()">
+        <ion-icon name="pin"></ion-icon>
+     </button>
+     <button ion-button icon-only (click)="addPropertyPage()">
+      <ion-icon name="add"></ion-icon>
+   </button>
+   <button ion-button icon-only (click)="notification()">
+        <ion-icon name="notifications-outline"><ion-badge *ngIf="notificationCount>0">{{notificationCount}}</ion-badge></ion-icon>
+      </button> 
+    </ion-buttons>
+  </ion-navbar>
+  <!-- subheader section -->
+  <ion-toolbar>
+    <ion-segment [(ngModel)]="propertyStatus"
+    (ionChange)="filterListing(propertyStatus,audioTrack);" color="light">
+      <ion-segment-button value="publish">Published</ion-segment-button>
+      <ion-segment-button value="draft">Unpublished</ion-segment-button>
+    </ion-segment>
+  </ion-toolbar>
+
+
+</ion-header>
+
+<ion-content>
+  <ion-refresher (ionRefresh)="doRefresh($event);" >
+      <ion-refresher-content></ion-refresher-content>
+  </ion-refresher>
+  <div class="noResult" *ngIf="!isRecAvailable">
+    {{propertyStatus=='publish' ? 'Alert! You have not uploaded a home in the last 72 hours!' : 'No Record Found.'}}
+
+     <p>Pull Down screen to refresh.</p></div>
+     <div [ngSwitch]="propertyStatus" *ngFor="let pObj of propertyData; let i=index">
+       <div *ngIf="pObj.post_status =='publish'">
+          <ion-card  *ngSwitchCase="'publish'">
+                  <ion-card-header col-6>
+                    <img src="{{pObj.thumb!=''? pObj.thumb  : 'assets/imgs/no-image.jpg'}}" (click)="viewDetail(pObj)">
+                    <button  ion-fab mini class="customFab" (click)="removeProperty(pObj)"><ion-icon name="trash"></ion-icon></button>
+                  </ion-card-header>
+                  <ion-card-content col-6 (click)="viewDetail(pObj)">
+                        <ion-card-title >{{pObj.post_title}}</ion-card-title>
+                        <p>{{getFomatedPrice(pObj.property_price)}}</p>
+                        <p>{{pObj.street_name}}</p>
+                        <p>{{pObj.property_city}}, {{pObj.property_state_ab}}, {{pObj.postal_code}}</p>
+                         <p>Sq Ft: {{pObj.property_size}}</p>  
+                  </ion-card-content>
+             
+            </ion-card>
+       </div>
+       <div *ngIf="pObj.post_status =='draft'">
+          <ion-card  *ngSwitchCase="'draft'">
+                  <ion-card-header col-6>
+                    <img src="{{pObj.thumb!=''? pObj.thumb  : 'assets/imgs/no-image.jpg'}}" (click)="viewDetail(pObj)">
+                    <button  ion-fab mini class="customFab" (click)="removeProperty(pObj)"><ion-icon name="trash"></ion-icon></button>
+                  </ion-card-header>
+                  <ion-card-content col-6 (click)="viewDetail(pObj)">
+                        <ion-card-title >{{pObj.post_title}}</ion-card-title>
+                        <p>{{getFomatedPrice(pObj.property_price)}}</p>
+                        <p>{{pObj.street_name}}</p>
+                        <p>{{pObj.property_city}}, {{pObj.property_state_ab}}, {{pObj.postal_code}}</p>
+                         <p>Sq Ft: {{pObj.property_size}}</p>  
+                  </ion-card-content>
+            </ion-card>
+       </div>
+       <div *ngIf="pObj.post_status =='expired'">
+          <ion-card  *ngSwitchCase="'expired'" >
+                  <ion-card-header col-6>
+                    <img src="{{pObj.thumb!=''? pObj.thumb  : 'assets/imgs/no-image.jpg'}}" (click)="viewDetail(pObj)">
+                    <button  ion-fab mini class="customFab" (click)="removeProperty(pObj)"><ion-icon name="trash"></ion-icon></button>
+                  </ion-card-header>
+                  <ion-card-content col-6 (click)="viewDetail(pObj)">
+                          <ion-card-title >{{pObj.post_title}}</ion-card-title>
+                          <p>{{getFomatedPrice(pObj.property_price)}}</p>
+                          <p>{{pObj.street_name}}</p>
+                          <p>{{pObj.property_city}}, {{pObj.property_state_ab}}, {{pObj.postal_code}}</p>
+                          <p>Sq Ft: {{pObj.property_size}}</p>  
+                   
+                  </ion-card-content>      
+            </ion-card>
+       </div>
+ 
+      </div>
+</ion-content>

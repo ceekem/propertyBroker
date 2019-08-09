@@ -1,0 +1,22 @@
+<ion-content padding class="redBackground">
+
+  <div class="logo" text-center>
+      <img src="assets/dummy-logo.png">
+  </div>
+  <form (ngSubmit)="frmSubmit()">
+    <ion-list no-lines>
+      <ion-item>
+        <ion-input type="text" name="email"  [(ngModel)]="frmData.email" placeholder="Email: demo_agent@gmail.com" ></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-input type="password" name="password"  [(ngModel)]="frmData.password" type="password" placeholder="123456"></ion-input>
+      </ion-item>
+      <p class="hint" (click)="hintAlert()" text-end>Hint</p>
+    </ion-list>
+    <button ion-button block round>Login</button>
+  </form>
+
+  <button ion-button clear block color="light" [navPush]="registerScreen">Register</button>
+  <button ion-button clear text-right color="light" outline block [navPush]="forgotpasswordPage">Forgot Password?</button>
+</ion-content>

@@ -1,0 +1,57 @@
+page-property-detail {
+  img{
+    width:100% !important;
+    height:230px;
+  }
+        h1{ font-size:17px;}
+      
+        .ticker{position: absolute; margin:5px;  padding:5px 10px; border-radius:5px;
+            background-color: color($colors, primary);
+            color:color($colors, light);
+         }
+        
+        .card{
+          margin:10px 0 0 0;
+          width:100%;
+      
+          .card-header{
+            h2{ font-weight: bold; font-size: 18px;  }
+            border-bottom:#f1f1f1 1px solid;
+            margin-bottom:10px;}
+        }
+        .card-content{
+          h2{
+         color:#707070;
+          }
+          p{
+            color:#000; font-weight:400;
+          }
+          ion-row{
+            margin-top:3%;
+          }
+           .list .item{ padding-left:0;}
+           ion-row{
+             ion-col{ padding:0px;}
+             ion-col:first-child{ color:#707070;}
+           }
+        }
+      ion-slides{height:250px; margin-top:-8px;}
+      .detailImg{
+        img{ width:100%; height:auto; object-fit: cover;}
+      }
+        .read-more-state{ display: none; }
+        .read-more-target{ opacity:0; max-height:0; font-size:0; transition:.25s ease;}
+        .read-more-state:checked ~ .read-more-wrap .read-more-target{
+          opacity: 1;
+        }
+        .swiper-container-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet {
+          margin: 10px 5px;
+          width: 12px;
+          height: 12px;
+          background: color($colors, light);
+          opacity:0.7;
+      }
+      .swiper-pagination-bullet-active{
+        background: color($colors, primary) !important;
+      }
+}

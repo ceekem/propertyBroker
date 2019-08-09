@@ -1,0 +1,45 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle> <ion-icon name="menu"></ion-icon> </button>
+    <ion-title>Profile</ion-title>
+     <ion-buttons end>
+      <button ion-button icon-only (click)="notification()">
+        <ion-icon name="notifications-outline"><ion-badge *ngIf="notificationCount>0">{{notificationCount}}</ion-badge></ion-icon>
+      </button> 
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding class="commonBackground">
+
+  <form (ngSubmit)="frmSubmit()">
+    <ion-list no-lines>
+      <ion-item [ngClass]="frmVArray[0]">
+       <ion-input  name="fullname" placeholder="Full Name"
+       (ionChange)="autoValidate(0,frmData.fullname)" [(ngModel)]="frmData.fullname" ></ion-input>
+     </ion-item>
+
+     <ion-item [ngClass]="frmVArray[1]">
+      <ion-input  name="email" placeholder="Email Address" (ionChange)="autoValidate(1,frmData.email)" [(ngModel)]="frmData.email" ></ion-input>
+    </ion-item>
+
+        <ion-item [ngClass]="frmVArray[2]">
+         <ion-input type="text"
+         [brmasker]="{mask:'(000) 000-0000', len:14}"
+         name="phone_number" (ionChange)="autoValidate(2,frmData.phone_number)" placeholder="Mobile Number" [(ngModel)]="frmData.phone_number"></ion-input>
+        </ion-item>
+
+        <ion-item [ngClass]="frmVArray[3]">
+         <ion-textarea  name="brokerrage_address" placeholder="Brokerage Address" [(ngModel)]="frmData.brokerrage_address" ></ion-textarea>
+        </ion-item>
+
+        <ion-item [ngClass]="frmVArray[4]">
+         <ion-input  type="number" name="license" placeholder="License Number" [(ngModel)]="frmData.license" ></ion-input>
+        </ion-item>
+
+    </ion-list>
+  <button ion-button block round>Update</button>
+</form>
+
+</ion-content>
+

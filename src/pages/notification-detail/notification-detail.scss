@@ -1,0 +1,22 @@
+page-notification-detail {
+    .callicon{
+        position:absolute;
+        bottom:5px;
+        right:5px;
+    }
+    .header{
+        background: #dad2d2;
+        padding:5px;
+        color:#943838;
+    }
+    p{
+        background: #fff;
+        padding: 13px 5px;
+        margin-top: -10px;
+    }
+    .commonBackground{
+        background: url(../assets/imgs/listingBackground.jpg) no-repeat scroll left bottom/cover;
+        display: block;
+        background-repeat: repeat-y;
+    }
+}
